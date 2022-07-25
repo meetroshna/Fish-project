@@ -85,15 +85,15 @@ cols
 
 
 from sklearn.preprocessing import LabelEncoder, StandardScaler
-encoder = LabelEncoder()
-y = encoder.fit_transform(y)
-y_map = {index:label for index,label in enumerate(encoder.classes_)}
+#encoder = LabelEncoder()
+#y = encoder.fit_transform(y)
+#y_map = {index:label for index,label in enumerate(encoder.classes_)}
 
 
 # In[24]:
 
 
-y_map
+#y_map
 
 
 # In[25]:
