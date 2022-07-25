@@ -15,7 +15,7 @@ logistic_model = pickle.load(pickle_in)
 
 @app.route('/')
 def home():
-    return render_template('FLASK.html')
+    return render_template('Fish.html')
 
 
 @app.route('/predict',methods=["POST"])
@@ -27,7 +27,7 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = logistic_model.predict(final_features)
     #prediction = logistic_model.predict([[242.0,23.2,25.4,30.0,11.5200,4.0200]])
-    return render_template('FLASK.html', prediction_text = 'THE SPECIES OF THE FISH IS  {}'.format(str(prediction)))
+    return render_template('Fish.html', prediction_text = 'THE SPECIES OF THE FISH IS  {}'.format(str(prediction)))
 
 if __name__=='__main__':
     app.run()
